@@ -9,7 +9,7 @@ Pemain dapat mengontrol platform untuk memantulkan bola dan menghancurkan musuh 
 ### Class
  - Area  
 Parent class untuk mengelola dimensi objeck dan deteksi tabrakan
-```
+```py
 class Area():
     def __init__(self, x, y, w, h, color=None):
         self.rect = pygame.Rect(x, y, w, h)
@@ -24,7 +24,7 @@ class Area():
 ```
 - Picture  
 Child class dari `Area` untuk menangani objek berbasis gambar.
-```
+```py
 class Picture(Area):
     def __init__(self, filename, x=0, y=0, w=0, h=0):
         Area.__init__(self, x=x, y=y, w=w, h=h, color=None)
@@ -34,7 +34,7 @@ class Picture(Area):
 ```
 - Label  
 Child class dari `Area` untuk menampilkan teks.
-```
+```py
 class Label(Area):
     def setText(self, text, fSize, text_color=(0, 0, 0)):
         self.image = pygame.font.SysFont('verdana', fSize).render(text, True, text_color)
